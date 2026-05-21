@@ -63,6 +63,12 @@ variable "max_capacity" {
   default     = 4
 }
 
+variable "assign_public_ip" {
+  description = "Assign a public IP to ECS tasks — required when tasks are in public subnets with no NAT gateway"
+  type        = bool
+  default     = false
+}
+
 variable "health_check_path" {
   description = "Path the load balancer hits to check if the container is healthy"
   type        = string
