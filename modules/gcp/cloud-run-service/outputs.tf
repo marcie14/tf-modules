@@ -12,3 +12,8 @@ output "cloud_run_iam_member" {
   description = "iam member data"
   value = google_cloud_run_v2_service_iam_member.member
 }
+
+output "cloud_run_url" {
+  description = "URL of the deployed Cloud Run service"
+  value       = google_cloud_run_v2_service.default.uri
+}
